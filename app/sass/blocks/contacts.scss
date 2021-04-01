@@ -1,0 +1,117 @@
+/*  Контакты  */
+
+.contacts {
+
+    margin-top: 100px;
+    background: #282828;
+    padding: 90px 0 80px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__inner .contacts-list:first-child {
+        margin-left: 70px;
+    }
+
+
+    &__title {
+        display: inline-block;
+        color: #6c6c6c;
+        font-size: 1.714rem;
+        font-weight: 300;
+        padding-bottom: 35px;
+    }
+
+
+    .contacts__list {
+
+         ul {
+            margin-bottom: 10px;
+            li {
+
+                a {
+                    font-weight: 300;
+                    color: #fff;
+                    font-size: 15px;
+                    text-align: left;
+                }
+    
+            } 
+        }
+
+    }   
+}
+
+@media screen and (max-width: 1136px) {
+    .contacts {
+        padding-left: 20px;
+        padding-right: 20px;
+        .contacts__list ul {
+            li {
+                margin-bottom: 10px;
+                a {
+                    font-weight: 300;
+                    color: rgb(155, 134, 134);
+                    font-size: 1.4rem;
+                    text-align: left;
+                    
+                }
+            }
+        }
+    }
+
+    .contacts__titles .contacts__list:first-child {
+        margin: 0;
+    }
+    .contacts__list>ul {
+        display: none;
+    }
+
+    .contacts__titles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts__inner {
+        display: flex;
+        flex-direction: column; 
+        cursor: pointer;
+    }
+
+    .contacts__list>ul {
+        padding: 0;
+        margin-bottom: 10px;
+        
+    }
+    .contacts__title {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        color: white;
+        position: relative;
+    }
+
+    .contacts__title::after {
+        content: '+';
+        color: white;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .contacts__list-active>ul {
+        display: block;
+    }
+
+    .contacts__list-active>.contacts__title::after {
+        transform: rotate(45deg);
+        transition: 0.3s;
+    }
+}
+
+
+
+

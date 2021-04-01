@@ -1,0 +1,252 @@
+.recomend {
+    margin-top: 170px;
+    margin-bottom: 225px;
+    text-align: center;
+
+    img {
+        max-height: 500px;
+    }
+
+    .titleMain {
+
+        color: #232323;
+        font-size: 40px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+
+    }
+
+    .recomend__text {
+        margin: 0 auto 65px;
+        width: 50%;
+        color: #777;
+    }
+
+    // блоки
+
+    .recommend-level:last-child {
+        height: 758.6px;
+    }
+
+    .recommend-level {
+        display: flex;
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+.recommend-left {
+    width: 45%;
+    margin: 0 10px 0 0;
+}
+
+.recommend-item.high {
+    height: 100%;
+}
+
+.recommend-left .recommend-item,
+.recommend-right .recommend-item {
+    display: block;
+}
+
+.recommend-left .recommend-item {
+    width: 100%;
+}
+
+.recommend-item.white {
+    background: #fff;
+    color: #000;
+}
+
+.recommend-item.high {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recommend-item {
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+    padding: 30px 30px 0 30px;
+}
+
+.recommend-item.high .recommend-item-content {
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.recommend-item-content {
+    top: 0;
+    color: #fff;
+    text-align: left;
+}
+
+.recommend-item.white .recommend-item__name {
+    color: #000;
+}
+
+.recommend-item__name {
+    line-height: 1;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.recommend-item.white .recommend-item__category {
+    color: #000;
+}
+
+.recommend-item__category {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+    display: block;
+}
+
+.recommend-item.white .recommend-item-desc {
+    color: #777;
+}
+
+.recommend-item.high .recommend-item-desc {
+    margin: 0 auto;
+}
+
+.recommend-item-desc {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.recommend-item-desc {
+    color: #777;
+    width: 60%;
+    font-weight: 300;
+}
+
+.recommend-item.high .recommend-item__pic {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+
+    img {
+        width: 100%;
+    }
+}
+
+/*  Левый         */
+.recommend-left {
+    width: 50%;
+}
+
+.recommend-right {
+    width: 50%;
+
+    .recommend-item {
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+
+    }
+
+    .black {
+        background: #282828;
+
+        .recommend-item__pic {
+            margin: 0 30px 0 -30px;
+            height: 100%;
+            width: 50%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .white {
+        background: white;
+
+        .recommend-item__pic {
+            margin: 0 -30px 0 30px;
+            height: 100%;
+            width: 50%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    // 
+}
+
+/*Адаптивные стили*/
+
+
+@media screen and (max-width: 767px) {
+
+    .recomend {
+
+
+        .recomend__text  {
+            width: 95%;
+        }
+
+        img {
+            max-height: 400px;
+        }
+
+        .recommend-level:last-child {
+            height: auto;
+        }
+
+        .recommend-level {
+            flex-direction: column;
+        }
+
+        .recommend-left {
+            width: 100%;
+
+            .recommend-item {
+                padding: 10px 5px;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            
+        }
+
+        .recommend-right {
+            width: 100%;
+            .recommend-item .black {
+
+                    .recommend-item__pic {
+                        margin: 0 30px 0 -30px;
+                        height: 100%;
+                        width: 20%;
+                        img {
+                            max-height: 280px;
+                        }
+                    }
+                }
+                
+            
+        }
+
+
+    }
+}

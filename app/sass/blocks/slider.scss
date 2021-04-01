@@ -1,0 +1,157 @@
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+
+}
+
+
+.swiper-container--big {
+    max-height: 475px;
+
+    .swiper-slide {
+        padding: 60px 65px;
+        background: #282828;
+        align-items: center;
+    }
+}
+
+
+.swiper-slide {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+
+
+.swiper-wrapper {
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+
+
+    
+}
+
+
+
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+     
+
+}
+
+
+.swiper-pagination__bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: 0.1;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.swiper-pagination__bullet--active {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background:white;
+    opacity: 0.9;
+    cursor: default;
+}
+
+
+.swiper-pagination-bullets {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+#menu-categories {
+    overflow: hidden;
+
+    .swiper-slide {
+        width: auto;
+    }
+
+    .swiper-wrapper {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: 95%;
+    width: 15px;
+    height: 25px;
+    background-size: contain;
+    display: none;
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 4000px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+       display: none;
+    }
+
+} 
+
+
+@media (max-width: 767px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 95%;
+        width: 5px;
+        height: 5px;
+        display: flex;
+        color: grey;
+        font-size: 1rem;
+
+        &::after,
+        &::before {
+            font-size: 2rem;
+        }
+    }
+    
+
+    
+}
